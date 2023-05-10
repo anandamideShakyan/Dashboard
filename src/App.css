@@ -1,38 +1,99 @@
 .App {
-  text-align: center;
+  height: 100vh;
+  width: 100vw;
+} 
+body{
+  margin: 0;
+  padding: 0;
+}
+.Navbar{
+  width: 100%;
+  height: 50px;
+  
+  background-color: #f5f5f5;
+  color:grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 5px 0 #efefef;
+  box-sizing: border-box;
+  padding: 2px  12px;
+}
+.Sidebar{
+  height: 100vh;
+  width: 280px;
+  border-radius: 0 15px;
+  background-color: #efefef;
+}
+.SidebarList{
+  height: auto;
+  padding: 0;
+  width: 100%;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.SidebarList .row{
+  width: 100%;
+  height: 70px;
+
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.SidebarList .row:hover{
+  cursor: pointer;
+  background-color: rgb(236, 226, 226);
+}
+.SidebarList .row #active{
+    background-color: rgb(236, 226, 226);
+}
+.row #icon{
+  flex: 30%;
+  display: grid;
+  place-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.row #title{
+  flex: 70%;  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Date{
+  color:grey;
+}
+.Side-table{
+  padding-top: 5px;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+
+}
+.Side-plot {
+  padding-top: 5px;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+
+}
+.Tables{
+  background-color: #fff;
+  padding: 20px 15px 20px 15px;
+  height: 95vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow-y: scroll;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Table{
+  max-height: 100%;
+  margin:  5px auto;
+  /* overflow-y:scroll ; */
+  box-sizing: border-box;
 }
